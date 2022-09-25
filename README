@@ -1,0 +1,46 @@
+# Memoria lui Biju
+
+December 2021
+
+<ocw.cs.pub.ro/courses/iocla/teme/tema-2>
+
+Student: Maciuca Alexandru-Petru 324CA
+
+## Implementation
+
+    The homework consists of four independent exercises.
+Each task involves implementing a function in assembly language.
+The implementation is done in the files provided for each exercises.
+
+### Structure
+
+--> Task 1: Reverse One Time Pad
+
+[idea]: Get both particular characters, xor them together and then save the result.
+
+--> Task 2: Ages
+
+[idea]: Compare months and days in order to determine whether or not the age should
+be incremented by 1. After doing all the checks, subtract the years, and if needed
+decrement the value by 1 also.
+
+--> Task 3: Columnar Transposition Cipher
+
+[idea]: The difference between two characters from the same column is exactly the string
+length and with this in mind, for every column I add the initial column index and the string
+length for every line from the matrix.
+
+--> Task 4: Cache Load Simulation
+
+[idea]: Obtain the initial tag from the address. Search it through all the tags and if found
+apply cache hit algorithm, else apply cache miss algorithm followed by cache hit.
+
+Cache Miss -> add the tag in tags and the 8 bytes in the cache matrix on the to_replace line
+Cache Hit -> search tag and find the line with that tag from cache matrix. Apply offset and 
+return that specific byte.
+
+#### Difficulties
+
+    Since one of the few debugging tools was PRINTF32 macro, It was rather difficult to
+solve some of the problems. Printing 1byte/2bytes registry was also difficult since the
+macro only works with 4bytes registry.
